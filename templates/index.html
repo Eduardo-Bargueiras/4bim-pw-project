@@ -1,33 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <title>Central Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!--header-->
-    <header class="header">
-        <h1 class="header-title">CENTRAL HUB</h1>
-    </header>
-    <!--section-->
-    <section>
-        <!--cards-->
-        <div class="cards">
-            <!--eduardo-->
-            <div class="card-solo">
+
+    <!-- ================= PÁGINA PRINCIPAL ================= -->
+    <section id="home" class="pagina">
+
+        <header>
+            <h1>CENTRAL HUB</h1>
+        </header>
+
+        <main class="cards">
+
+            <article class="card">
                 <h2>Eduardo</h2>
-                <p>Estudante de Desenvolvimento de Sistemas na ETEC Vasco Antônio Venchiarutti e futuro dev backend. Curioso e focado em melhorar os conhecimentos sobre programação para aplicar eles em outros programas.</p>
-                <a href="#">Acessar</a>
-            </div>
-            <!--richard-->
-            <div class="card-solo">
+                <p>
+                    Estudante de Desenvolvimento de Sistemas na ETEC Vasco
+                    Antônio Venchiarutti e futuro dev backend. Curioso e focado
+                    em melhorar os conhecimentos sobre programação para aplicar
+                    eles em outros programas.
+                </p>
+                <button class="btn" data-destino="eduardo">ACESSAR</button>
+            </article>
+
+            <article class="card">
                 <h2>Richard</h2>
-                <p>Estudante de tecnologia, programação e desenvolvimento web. Curioso, observador e focado em resolver problemas, busco sempre aprender novas habilidades e transformar ideias criativas em projetos reais.</p>
-                <a href="#">Acessar</a>
-            </div>
-        </div>
+                <p>
+                    Estudante de tecnologia, programação e desenvolvimento web.
+                    Curioso, observador e focado em resolver problemas, busco
+                    sempre aprender novas habilidades e transformar ideias
+                    criativas em projetos reais.
+                </p>
+                <button class="btn" data-destino="richard">ACESSAR</button>
+            </article>
+
+        </main>
+
     </section>
+
+
+    <!-- ================= PÁGINA DO EDUARDO ================= -->
+    <section id="eduardo" class="pagina escondida">
+
+        <header>
+            <h1>EDUARDO — YOUNDER</h1>
+        </header>
+
+        <main class="conteudo">
+
+            <h2>Sobre mim</h2>
+            <p>
+                Meu nome é Eduardo, também conhecido como Younder, Pudim ou D4rk
+                em alguns ambientes. Sou estudante do Ensino Médio integrado ao
+                curso técnico de Desenvolvimento de Sistemas na ETEC.
+            </p>
+            <p>
+                Tenho interesse em tecnologia, programação, desenvolvimento de
+                jogos e criação digital. Estou no início da minha jornada como
+                desenvolvedor e busco constantemente aprender novas habilidades,
+                desenvolver projetos e melhorar minha capacidade de resolver
+                problemas.
+            </p>
+
+            <h2>Áreas de interesse</h2>
+            <div class="tags">
+                <span>Desenvolvimento de Sistemas</span>
+                <span>Programação</span>
+                <span>Desenvolvimento de jogos</span>
+                <span>Roblox Studio e Lua/Luau</span>
+                <span>HTML e CSS</span>
+                <span>Python</span>
+                <span>C++</span>
+                <span>GameMaker</span>
+                <span>Pixel Art e desenho digital</span>
+                <span>Design e interfaces</span>
+            </div>
+
+            <h2>Projetos e experiências</h2>
+
+            <h3>UnderC</h3>
+            <p>
+                Projeto pessoal inspirado em Undertale, desenvolvido no
+                GameMaker. A proposta é criar um simulador de batalhas com
+                personagens, diálogos, sistemas de combate e elementos
+                narrativos próprios.
+            </p>
+
+            <h3>Dummy Extermination</h3>
+            <p>
+                Projeto de jogo no Roblox com temática de combate contra
+                inimigos chamados Dummys. A ideia envolve sistemas de combate,
+                inimigos com atributos próprios, habilidades, chefes e
+                progressão.
+            </p>
+
+            <h3>Projetos de programação no Roblox</h3>
+            <p>Pequenos sistemas para aprender programação, incluindo:</p>
+            <ul>
+                <li>Sistema de dinheiro</li>
+                <li>Mecânicas de interação</li>
+                <li>ClickDetectors</li>
+                <li>Sistemas de compra e desbloqueio</li>
+                <li>Atributos e comportamento de NPCs</li>
+            </ul>
+
+            <h3>Projetos acadêmicos</h3>
+            <p>
+                Atividades e projetos do curso técnico de Desenvolvimento de
+                Sistemas, incluindo páginas web em HTML e CSS, trabalhos em
+                grupo e organização de portfólios utilizando GitHub.
+            </p>
+
+            <h2>Habilidades e conhecimentos</h2>
+            <ul>
+                <li>Conhecimentos iniciais de HTML e CSS</li>
+                <li>Conhecimentos iniciais de Python</li>
+                <li>Conhecimentos iniciais de C++</li>
+                <li>Introdução ao desenvolvimento de jogos com GameMaker</li>
+                <li>Introdução à programação com Lua/Luau no Roblox Studio</li>
+                <li>Familiaridade com Git e GitHub</li>
+                <li>Interesse em lógica de programação, estruturas de dados e desenvolvimento de sistemas</li>
+                <li>Criatividade para desenvolver ideias de jogos e projetos</li>
+            </ul>
+
+            <h2>Objetivos</h2>
+            <p>
+                Meu principal objetivo é evoluir como desenvolvedor, adquirir
+                experiência prática, concluir meus estudos técnicos e construir
+                projetos cada vez mais completos.
+            </p>
+            <p>
+                Quero utilizar meu portfólio para apresentar meus projetos,
+                demonstrar minha evolução, compartilhar minhas habilidades e
+                futuramente ampliar minhas oportunidades profissionais na área
+                de tecnologia.
+            </p>
+
+            <div class="links">
+                <a class="btn-link" href="https://github.com/Eduardo-Bargueiras" target="_blank">Ver GitHub</a>
+                <button class="btn-link claro" data-destino="home">← Voltar</button>
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- ================= PÁGINA DO RICHARD ================= -->
+    <section id="richard" class="pagina escondida">
+
+        <header>
+            <h1>RICHARD</h1>
+        </header>
+
+        <main class="conteudo">
+
+            <h2>Sobre mim</h2>
+            <p>
+                Sou um estudante interessado em tecnologia, programação e
+                desenvolvimento web. Tenho um perfil curioso, observador e gosto
+                de entender como as coisas funcionam e encontrar soluções para
+                diferentes desafios.
+            </p>
+            <p>
+                Estou sempre buscando aprender coisas novas, desenvolver minhas
+                habilidades e transformar minhas ideias em projetos práticos.
+                Acredito que cada experiência é uma oportunidade de evoluir,
+                adquirir conhecimento e descobrir novas possibilidades.
+            </p>
+
+            <h2>Personalidade</h2>
+            <ul>
+                <li>Curioso: gosto de entender como as coisas funcionam por dentro</li>
+                <li>Observador: presto atenção nos detalhes antes de agir</li>
+                <li>Prestativo: sempre disposto a ajudar quem precisa</li>
+                <li>Colaborativo: acredito que trabalhar em equipe faz todo mundo evoluir</li>
+                <li>Persistente: encaro erros como parte do aprendizado</li>
+            </ul>
+
+            <h2>Áreas de interesse</h2>
+            <div class="tags">
+                <span>Tecnologia</span>
+                <span>Programação</span>
+                <span>Desenvolvimento web</span>
+                <span>HTML e CSS</span>
+                <span>Resolução de problemas</span>
+                <span>Jogos</span>
+                <span>Criatividade</span>
+                <span>Trabalho em equipe</span>
+            </div>
+
+            <h2>Fora do código</h2>
+            <p>
+                Gosto de jogos, tanto pela diversão quanto por tudo que existe
+                por trás deles: mecânicas, desafios, estratégia e criatividade.
+                Esse interesse também me motiva a aprender mais sobre
+                programação e a pensar em ideias para projetos futuros.
+            </p>
+
+            <h2>O que busco aprender</h2>
+            <ul>
+                <li>Aprimorar meus conhecimentos em desenvolvimento web</li>
+                <li>Melhorar minha lógica de programação</li>
+                <li>Aprender a organizar e publicar projetos no GitHub</li>
+                <li>Construir projetos práticos que mostrem minha evolução</li>
+            </ul>
+
+            <h2>Objetivos</h2>
+            <p>
+                Meu objetivo é continuar crescendo na área da tecnologia,
+                aprimorando minhas habilidades e construindo projetos que
+                representem minha criatividade, dedicação e vontade de aprender.
+            </p>
+
+            <div class="links">
+                <a class="btn-link" href="https://github.com/richard426278" target="_blank">Ver GitHub</a>
+                <button class="btn-link claro" data-destino="home">← Voltar</button>
+            </div>
+
+        </main>
+
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

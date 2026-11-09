@@ -1,8 +1,165 @@
+/* ===== VARIÁVEIS (cores do site) ===== */
 :root {
-    --background-color: #D8D989;
-    --text-color: #493D3F;
-    --background-complementary-color: #E5E3BD;
-    --original-color: #F8F2CE;
+    --azul-escuro: #14213d;
+    --branco: #ffffff;
+    --cinza-claro: #eef1f7;
+    --borda: #d5dbe8;
+    --texto: #1f2937;
+}
 
-    /* POSSIVELMENTE NOVAS CORES: #8B9A6E, #F7F2EB, #EAE2D6, #EEEEEE */
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* ===== GERAL ===== */
+body {
+    font-family: "DejaVu Sans Mono", Consolas, monospace;
+    background-color: var(--branco);
+    color: var(--texto);
+}
+
+/* Esconde as páginas que não estão ativas (controlado pelo JS) */
+.escondida {
+    display: none;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* ===== PÁGINA PRINCIPAL: CARDS ===== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 20px;
+}
+
+.card {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 20px;
+    background-color: var(--cinza-claro);
+    border: 2px solid var(--borda);
+    border-radius: 40px;
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 1.9rem;
+    color: var(--azul-escuro);
+    margin-bottom: 16px;
+}
+
+.card p {
+    flex: 1;
+    font-size: 0.85rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* ===== BOTÃO ACESSAR ===== */
+.btn {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* ===== PÁGINAS INDIVIDUAIS ===== */
+.conteudo {
+    max-width: 760px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+}
+
+.conteudo h2 {
+    margin: 34px 0 12px;
+    padding-bottom: 6px;
+    font-size: 1.4rem;
+    color: var(--azul-escuro);
+    border-bottom: 3px solid var(--azul-escuro);
+}
+
+.conteudo h3 {
+    margin: 16px 0 4px;
+    font-size: 1.05rem;
+    color: var(--azul-escuro);
+}
+
+.conteudo p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.conteudo ul {
+    padding-left: 22px;
+    line-height: 1.8;
+}
+
+/* ===== TAGS (áreas de interesse) ===== */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+}
+
+/* ===== BOTÕES DE LINK (GitHub / Voltar) ===== */
+.links {
+    margin-top: 36px;
+}
+
+.btn-link {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 12px 22px;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-link.claro {
+    background-color: var(--cinza-claro);
+    color: var(--azul-escuro);
 }
