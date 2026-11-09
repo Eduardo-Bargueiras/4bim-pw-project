@@ -1,10 +1,12 @@
-/* ===== VARIÁVEIS (cores do site) ===== */
+/* ===== VARIÁVEIS ===== */
 :root {
-    --azul-escuro: #14213d;
+    --azul-escuro: #233653;
+    --azul: #405d80;
+    --fundo: #e8edf4;
     --branco: #ffffff;
-    --cinza-claro: #eef1f7;
-    --borda: #d5dbe8;
-    --texto: #1f2937;
+    --cinza: #dce3ec;
+    --texto: #354256;
+    --secundario: #69778a;
 }
 
 /* ===== RESET ===== */
@@ -16,20 +18,21 @@
 /* ===== GERAL ===== */
 body {
     font-family: "DejaVu Sans Mono", Consolas, monospace;
-    background-color: var(--branco);
+    background-image:repeating-linear-gradient(rgb(197, 202, 236), white 100%, rgb(220, 232, 255));
+    padding-bottom: 500px;
     color: var(--texto);
 }
 
-/* Esconde as páginas que não estão ativas (controlado pelo JS) */
 .escondida {
     display: none;
+
 }
 
-/* ===== HEADER ===== */
+/* ===== CABEÇALHO ===== */
 header {
+    height: 180px;
     background-color: var(--azul-escuro);
     color: var(--branco);
-    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,129 +40,185 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
+    font-size: 3rem;
+    letter-spacing: 3px;
 }
 
-/* ===== PÁGINA PRINCIPAL: CARDS ===== */
+/* ===== PÁGINA INICIAL ===== */
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
-    padding: 60px 20px;
+    align-items: stretch;
+    gap: 35px;
+    padding: 85px 25px;
 }
 
+/* ===== CARDS ===== */
 .card {
-    width: 310px;
+    width: 360px;
+    min-height: 330px;
     display: flex;
     flex-direction: column;
-    padding: 30px 20px 20px;
-    background-color: var(--cinza-claro);
-    border: 2px solid var(--borda);
-    border-radius: 40px;
+    padding: 32px;
+    background-color: var(--branco);
+    border: 1px solid #d5dde8;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(35, 54, 83, 0.06);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(35, 54, 83, 0.12);
 }
 
 .card h2 {
-    text-align: center;
     font-size: 1.9rem;
     color: var(--azul-escuro);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .card p {
     flex: 1;
     font-size: 0.85rem;
-    font-weight: bold;
-    line-height: 1.4;
+    font-weight: normal;
+    line-height: 1.8;
+    color: var(--secundario);
 }
 
 /* ===== BOTÃO ACESSAR ===== */
 .btn {
-    margin-top: 20px;
-    padding: 16px;
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.btn:hover {
-    opacity: 0.85;
-}
-
-/* ===== PÁGINAS INDIVIDUAIS ===== */
-.conteudo {
-    max-width: 760px;
-    margin: 40px auto 60px;
-    padding: 0 20px;
-}
-
-.conteudo h2 {
-    margin: 34px 0 12px;
-    padding-bottom: 6px;
-    font-size: 1.4rem;
-    color: var(--azul-escuro);
-    border-bottom: 3px solid var(--azul-escuro);
-}
-
-.conteudo h3 {
-    margin: 16px 0 4px;
-    font-size: 1.05rem;
-    color: var(--azul-escuro);
-}
-
-.conteudo p {
-    margin-bottom: 10px;
-    line-height: 1.7;
-}
-
-.conteudo ul {
-    padding-left: 22px;
-    line-height: 1.8;
-}
-
-/* ===== TAGS (áreas de interesse) ===== */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tags span {
-    padding: 5px 12px;
-    font-size: 0.85rem;
-    background-color: var(--cinza-claro);
-    border: 1px solid var(--borda);
-    border-radius: 20px;
-}
-
-/* ===== BOTÕES DE LINK (GitHub / Voltar) ===== */
-.links {
-    margin-top: 36px;
-}
-
-.btn-link {
-    display: inline-block;
-    margin: 0 10px 10px 0;
-    padding: 12px 22px;
+    margin-top: 25px;
+    padding: 13px;
     background-color: var(--azul-escuro);
     color: var(--branco);
     font-family: inherit;
     font-size: 1rem;
     font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--azul);
+}
+
+/* ===== CONTEÚDO DOS PERFIS ===== */
+.conteudo {
+    max-width: 800px;
+    margin: 45px auto 60px;
+    padding: 35px 40px;
+    background-color: var(--branco);
+    border: 1px solid #d5dde8;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(35, 54, 83, 0.05);
+}
+
+.conteudo h2 {
+    margin: 35px 0 15px;
+    padding-bottom: 10px;
+    font-size: 1.35rem;
+    color: var(--azul-escuro);
+    border-bottom: 2px solid var(--cinza);
+}
+
+.conteudo h3 {
+    margin: 20px 0 8px;
+    font-size: 1rem;
+    color: var(--azul);
+}
+
+.conteudo p {
+    margin-bottom: 13px;
+    line-height: 1.8;
+    font-size: 0.9rem;
+    color: var(--texto);
+}
+
+.conteudo ul {
+    padding-left: 22px;
+    line-height: 1.9;
+    font-size: 0.9rem;
+    color: var(--texto);
+}
+
+/* ===== TAGS ===== */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.tags span {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    background-color: #eaf0f7;
+    color: var(--azul-escuro);
+    border: 1px solid #dce4ee;
+    border-radius: 5px;
+}
+
+/* ===== LINKS ===== */
+.links {
+    margin-top: 35px;
+    padding-top: 22px;
+    border-top: 1px solid var(--cinza);
+}
+
+.btn-link {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 12px 20px;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
     text-decoration: none;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: var(--azul);
 }
 
 .btn-link.claro {
-    background-color: var(--cinza-claro);
+    background-color: #e8edf4;
     color: var(--azul-escuro);
+}
+
+.btn-link.claro:hover {
+    background-color: #d7e0eb;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    header {
+        height: 115px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .cards {
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .conteudo {
+        margin: 25px 15px 40px;
+        padding: 25px 20px;
+    }
 }
